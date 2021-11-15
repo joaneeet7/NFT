@@ -7,6 +7,7 @@ import * as s from "./styles/globalStyles";
 import LipRenderer from "./components/lipRenderer";
 import _color from "./assets/images/bg/_color.png";
 
+
 function App() {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
@@ -64,16 +65,16 @@ function App() {
     <s.Screen image={_color}>
       {blockchain.account === "" || blockchain.lipToken === null ? (
         <s.Container flex={1} ai={"center"} jc={"center"}>
-          <s.TextTitle>Conectar con el videojuego</s.TextTitle>
+          <s.TextTitle>Bienvenido al videojuego de Tokens NFTs de Joan Amengual</s.TextTitle>
           <s.SpacerSmall />
-          <button
+          <s.Button1
             onClick={(e) => {
               e.preventDefault();
               dispatch(connect());
             }}
           >
             CONECTAR
-          </button>
+          </s.Button1>
 
           <s.SpacerXSmall />
           {blockchain.errorMsg != "" ? (
@@ -82,16 +83,17 @@ function App() {
         </s.Container>
       ) : (
         <s.Container ai={"center"} style={{ padding: "24px" }}>
-          <s.TextTitle>¡Bienvenido al videojuego NFT!</s.TextTitle>
+          <s.TextTitle>¡Bienvenido al videojuego de Tokens NFTs!</s.TextTitle>
           <s.SpacerSmall />
-          <button
+          <s.Button2
             onClick={(e) => {
               e.preventDefault();
-              mintNFT(blockchain.account, "JoanNFT");
+              const name = blockchain.account.substr(0,10)
+              mintNFT(blockchain.account, name);
             }}
           >
-            CREAR NFT
-          </button>
+            CREAR NUEVO NFT
+          </s.Button2>
 
           <s.SpacerMedium />
           <s.Container jc={"center"} fd={"row"} style={{ flexWrap: "wrap" }}>
@@ -107,7 +109,7 @@ function App() {
                     <s.TextDescription>NAME: {item.name}</s.TextDescription>
                     <s.TextDescription>RARITY: {item.rarity}</s.TextDescription>
                     <s.SpacerXSmall />
-                    <button
+                    <s.Button3
                       disabled={loading ? 1 : 0}
                       onClick={(e) => {
                         e.preventDefault();
@@ -115,7 +117,7 @@ function App() {
                       }}
                     >
                       SUBIR NIVEL
-                    </button>
+                    </s.Button3>
                   </s.Container>
                 </s.Container>
               );
