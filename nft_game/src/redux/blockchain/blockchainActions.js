@@ -45,10 +45,9 @@ export const connect = () => {
         });
         console.log(networkId);
         if (networkId == 5777) {
-          const lipToken = new web3.eth.Contract(
-            LipToken.abi,
-            "0xA51E0968e7937d0DFa20322db757670D3b41cEF6"
-          );
+          const abi = LipToken.abi
+          const address =  "0x9B2f8FBb2432BE43295b0Cd0bB0Ac8d4f3ec10bb"
+          const lipToken = new web3.eth.Contract(abi, address);
           dispatch(
             connectSuccess({
               account: accounts[0],
@@ -65,7 +64,7 @@ export const connect = () => {
           });
           // Add listeners end
         } else {
-          dispatch(connectFailed("Change network to Polygon."));
+          dispatch(connectFailed('¡El Smart Contract no se ha desplegado en la red!'));
         }
       } catch (err) {
         dispatch(connectFailed("Something went wrong."));

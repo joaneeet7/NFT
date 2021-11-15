@@ -15,6 +15,8 @@ function App() {
 
   console.log(data);
 
+
+
   const mintNFT = (_account, _name) => {
     setLoading(true);
     blockchain.lipToken.methods
@@ -62,7 +64,7 @@ function App() {
     <s.Screen image={_color}>
       {blockchain.account === "" || blockchain.lipToken === null ? (
         <s.Container flex={1} ai={"center"} jc={"center"}>
-          <s.TextTitle>Connect to the game</s.TextTitle>
+          <s.TextTitle>Conectar con el videojuego</s.TextTitle>
           <s.SpacerSmall />
           <button
             onClick={(e) => {
@@ -70,8 +72,9 @@ function App() {
               dispatch(connect());
             }}
           >
-            CONNECT
+            CONECTAR
           </button>
+
           <s.SpacerXSmall />
           {blockchain.errorMsg != "" ? (
             <s.TextDescription>{blockchain.errorMsg}</s.TextDescription>
@@ -79,17 +82,17 @@ function App() {
         </s.Container>
       ) : (
         <s.Container ai={"center"} style={{ padding: "24px" }}>
-          <s.TextTitle>Welcome to the game</s.TextTitle>
+          <s.TextTitle>¡Bienvenido al videojuego NFT!</s.TextTitle>
           <s.SpacerSmall />
           <button
-            disabled={loading ? 1 : 0}
             onClick={(e) => {
               e.preventDefault();
-              mintNFT(blockchain.account, "Unknown");
+              mintNFT(blockchain.account, "JoanNFT");
             }}
           >
-            CREATE NFT LIP
+            CREAR NFT
           </button>
+
           <s.SpacerMedium />
           <s.Container jc={"center"} fd={"row"} style={{ flexWrap: "wrap" }}>
             {data.allLips.map((item, index) => {
@@ -111,7 +114,7 @@ function App() {
                         levelUpLip(blockchain.account, item.id);
                       }}
                     >
-                      Level Up
+                      SUBIR NIVEL
                     </button>
                   </s.Container>
                 </s.Container>
