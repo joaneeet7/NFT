@@ -46,8 +46,9 @@ export const connect = () => {
         console.log(networkId);
         if (networkId == 5777) {
           const abi = LipToken.abi
-          const address =  "0x9B2f8FBb2432BE43295b0Cd0bB0Ac8d4f3ec10bb"
+          const address =  "0xD1D782f876b7A3Ad5faC30E60D6f07B84834FF03"
           const lipToken = new web3.eth.Contract(abi, address);
+          console.log(lipToken)
           dispatch(
             connectSuccess({
               account: accounts[0],
@@ -67,7 +68,7 @@ export const connect = () => {
           dispatch(connectFailed('¡El Smart Contract no se ha desplegado en la red!'));
         }
       } catch (err) {
-        dispatch(connectFailed("Something went wrong."));
+        dispatch(connectFailed("¡Algo ha ido mal!"));
       }
     } else {
       dispatch(connectFailed("Install Metamask."));

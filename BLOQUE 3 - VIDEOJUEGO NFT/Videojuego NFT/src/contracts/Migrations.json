@@ -665,7 +665,7 @@
   "sourceMap": "66:352:11:-:0;;;90:33;;;-1:-1:-1;;;;;;90:33:11;113:10;90:33;;;66:352;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "66:352:11:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;127:36;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;90:33;;;:::i;:::-;;;;;;;:::i;313:103::-;;;;;;:::i;:::-;;:::i;:::-;;127:36;;;;:::o;90:33::-;;;-1:-1:-1;;;;;90:33:11;;:::o;313:103::-;225:5;;-1:-1:-1;;;;;225:5:11;211:10;:19;196:101;;;;-1:-1:-1;;;196:101:11;;;;;;;:::i;:::-;;;;;;;;;375:24:::1;:36:::0;313:103::o;14:190:12:-;;126:2;114:9;105:7;101:23;97:32;94:2;;;147:6;139;132:22;94:2;-1:-1:-1;175:23:12;;84:120;-1:-1:-1;84:120:12:o;209:203::-;-1:-1:-1;;;;;373:32:12;;;;355:51;;343:2;328:18;;310:102::o;417:415::-;619:2;601:21;;;658:2;638:18;;;631:30;697:34;692:2;677:18;;670:62;-1:-1:-1;;;763:2:12;748:18;;741:49;822:3;807:19;;591:241::o;837:177::-;983:25;;;971:2;956:18;;938:76::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Migrations {\n  address public owner = msg.sender;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    require(\n      msg.sender == owner,\n      \"This function is restricted to the contract's owner\"\n    );\n    _;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "/Users/joan_amengual/GitHub/NFT/nft_game/contracts/Migrations.sol",
+  "sourcePath": "/Users/joan_amengual/GitHub/NFT/BLOQUE 3 - VIDEOJUEGO NFT/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -1450,12 +1450,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x16c2F4622D2c90f0a4a73A9a662606F6F4aE157d",
-      "transactionHash": "0x579974e5873becb68b476639d850d281e10149f4da371f19aa9b01662540ab3b"
+      "address": "0xE4f016b2FbDF323bCa880833723494c264EE0025",
+      "transactionHash": "0xdc1ace5b32ab59a73f0cfb2f4f63305d7b7bc1a7d5f5e850545bf46ffc992a65"
     }
   },
   "schemaVersion": "3.4.2",
-  "updatedAt": "2021-11-14T23:56:40.928Z",
+  "updatedAt": "2021-11-25T14:36:29.950Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
