@@ -6,7 +6,7 @@
 
 * Más cursos: https://blockstellart.com
 
-# [Curso completo de Docker de cero a experto](https://blockstellart.com)
+# [Curso de desarrollo de Videojuegos NFT de la A a la Z](https://blockstellart.com)
 
 * ¿Quieres convertirte en un **desarrollador de la tecnología Blockchain**?
 
