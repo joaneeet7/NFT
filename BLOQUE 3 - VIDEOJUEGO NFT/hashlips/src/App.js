@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import "./App.css";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
@@ -6,59 +6,80 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import LipRenderer from "./components/lipRenderer";
 import _color from "./assets/images/bg/_color.png";
-
+import Web3 from "web3";
+import LipToken from "./contracts/LipToken.json";
 
 function App() {
-  const dispatch = useDispatch();
-  const blockchain = useSelector((state) => state.blockchain);
-  const data = useSelector((state) => state.data);
+  const dispatch              = useDispatch();
+  const data                  = useSelector((state) => state.data);
   const [loading, setLoading] = useState(false);
-
+  const blockchain            = useSelector((state) => state.blockchain);
   console.log(data);
 
-  const mintNFT = (_account, _name) => {
+  // Mint de un nuevo NFT
+  const mintNFT = async (_account, _name) => {
     setLoading(true);
-    blockchain.lipToken.methods
-      .createRandomLip(_name)
-      .send({
-        from: _account,
-        value: blockchain.web3.utils.toWei("0.01", "ether"),
-      })
-      .once("error", (err) => {
+    blockchain.lipToken.methods.createRandomLip(_name).send({
+      from: _account,
+      value: blockchain.web3.utils.toWei("1", "ether"),
+      }).once("error", (err) => {
         setLoading(false);
         console.log(err);
-      })
-      .then((receipt) => {
+      }).then((receipt) => {
         setLoading(false);
         console.log(receipt);
         dispatch(fetchData(blockchain.account));
       });
   };
 
-  const levelUpLip = (_account, _id) => {
+  // Subir nivel de un NFT
+  const levelUpLip = async (_account, _id) => {
     setLoading(true);
-    blockchain.lipToken.methods
-      .levelUp(_id)
-      .send({
+    blockchain.lipToken.methods.levelUp(_id).send({
         from: _account,
-      })
-      .once("error", (err) => {
+      }).once("error", (err) => {
         setLoading(false);
         console.log(err);
-      })
-      .then((receipt) => {
+      }).then((receipt) => {
         setLoading(false);
         console.log(receipt);
         dispatch(fetchData(blockchain.account));
       });
   };
 
+    // El Owner recibe todos los ethers del Smart Contract
+    const balanceSmartContract = async (_account) => {
+      setLoading(true);
+      const money = blockchain.lipToken.methods.moneySmartContract().call()
+      money.then(value =>{alert(parseFloat(value/1000000000000000000))})
+      console.log(money)
+  };
+  
+
+    // El Owner recibe todos los ethers del Smart Contract
+    const ethersOwner = async (_account) => {
+    setLoading(true);
+    blockchain.lipToken.methods.withdraw().send({from: _account})
+    .once("error", (err) => {
+      setLoading(false);
+      console.log(err);
+    })
+    .then((receipt) => {
+      setLoading(false);
+      console.log(receipt);
+      dispatch(fetchData(blockchain.account));
+    });
+};
+
+  // Recurso: https://es.reactjs.org/docs/hooks-effect.html
+  // De forma similar a componentDidMount y componentDidUpdate
   useEffect(() => {
     if (blockchain.account != "" && blockchain.lipToken != null) {
       dispatch(fetchData(blockchain.account));
     }
   }, [blockchain.lipToken]);
 
+  // Visualización HTML
   return (
     <s.Screen image={_color}>
       {blockchain.account === "" || blockchain.lipToken === null ? (
@@ -120,7 +141,25 @@ function App() {
                 </s.Container>
               );
             })}
+            
           </s.Container>
+          <s.Button4
+            onClick={(e) => {
+              e.preventDefault();
+              balanceSmartContract()
+            }}
+          >
+            BALANCE SMART CONTRACT
+          </s.Button4>
+
+          <s.Button4
+            onClick={(e) => {
+              e.preventDefault();
+              ethersOwner(blockchain.account);
+            }}
+          >
+            RETIRAR DINERO
+          </s.Button4>
         </s.Container>
       )}
     </s.Screen>

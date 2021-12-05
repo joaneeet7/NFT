@@ -1,7 +1,5 @@
-// constants
 import Web3 from "web3";
 import LipToken from "../../contracts/LipToken.json";
-// log
 import { fetchData } from "../data/dataActions";
 
 const connectRequest = () => {
@@ -45,8 +43,9 @@ export const connect = () => {
         });
         console.log(networkId);
         if (networkId == 5777) {
+          const networkData = LipToken.networks[networkId]
           const abi = LipToken.abi
-          const address =  "0xD1D782f876b7A3Ad5faC30E60D6f07B84834FF03"
+          const address = networkData.address
           const lipToken = new web3.eth.Contract(abi, address);
           console.log(lipToken)
           dispatch(
@@ -56,14 +55,12 @@ export const connect = () => {
               web3: web3,
             })
           );
-          // Add listeners start
           window.ethereum.on("accountsChanged", (accounts) => {
             dispatch(updateAccount(accounts[0]));
           });
           window.ethereum.on("chainChanged", () => {
             window.location.reload();
           });
-          // Add listeners end
         } else {
           dispatch(connectFailed('¡El Smart Contract no se ha desplegado en la red!'));
         }
@@ -71,7 +68,7 @@ export const connect = () => {
         dispatch(connectFailed("¡Algo ha ido mal!"));
       }
     } else {
-      dispatch(connectFailed("Install Metamask."));
+      dispatch(connectFailed("¡Instala Metamask!"));
     }
   };
 };

@@ -70,7 +70,7 @@ export const Button2 = styled.button`
   background-color: #33FFF9;
   color: black;
   font-size: 20px;
-  padding: 10px 60px;
+  padding: 10px 50px;
   border-radius: 5px;
   margin: 10px 0px;
   cursor: pointer;
@@ -81,6 +81,16 @@ export const Button3 = styled.button`
   color: black;
   font-size: 15px;
   padding: 10px 50px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+`;
+
+export const Button4 = styled.button`
+  background-color: orange;
+  color: black;
+  font-size: 20px;
+  padding: 10px 60px;
   border-radius: 5px;
   margin: 10px 0px;
   cursor: pointer;
