@@ -6,8 +6,7 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import LipRenderer from "./components/lipRenderer";
 import _color from "./assets/images/bg/_color.png";
-import Web3 from "web3";
-import LipToken from "./contracts/LipToken.json";
+
 
 function App() {
   const dispatch              = useDispatch();
