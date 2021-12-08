@@ -1,0 +1,15 @@
+### Instalaciones necesarias
+
+- Instalar node.js
+- Instalar yarn 
+- Truffle 
+
+-------------------------------------
+
+- npx create-react-app <nombre_directorio>
+- Yarn add redux
+- Yarn add redux-thunk
+- Yarn add react-redux
+- Yarn add web3
+- Yarn add styled-components
+- Yarn add @openzeppelin/contracts
