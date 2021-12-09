@@ -4,9 +4,9 @@
 
 * Perfil de Udemy: https://www.udemy.com/user/joan-amengual-mesquida/
 
-* Más cursos: https://blockstellart.com
+* Más cursos: [Rutas de aprendizaje Blockchain](https://www.udemy.com/instructor/course/4397560/manage/goals/)
 
-# [Curso de desarrollo de Videojuegos NFT de la A a la Z](https://blockstellart.com)
+# [Curso de desarrollo de Videojuegos NFT de la A a la Z](https://www.udemy.com/instructor/course/4397560/manage/goals/)
 
 * ¿Quieres convertirte en un **desarrollador de la tecnología Blockchain**?
 
