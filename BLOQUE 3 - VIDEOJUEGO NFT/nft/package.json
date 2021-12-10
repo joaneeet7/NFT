@@ -19,11 +19,14 @@
     "web-vitals": "^1.0.1",
     "web3": "^1.6.1"
   },
+  "homepage": "https://github.com/joaneeet7/NFT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
