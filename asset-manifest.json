@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/joaneeet7/NFT/static/css/main.8ab16b8e.chunk.css",
+    "main.js": "/joaneeet7/NFT/static/js/main.a040a3a9.chunk.js",
+    "main.js.map": "/joaneeet7/NFT/static/js/main.a040a3a9.chunk.js.map",
+    "runtime-main.js": "/joaneeet7/NFT/static/js/runtime-main.879e59f8.js",
+    "runtime-main.js.map": "/joaneeet7/NFT/static/js/runtime-main.879e59f8.js.map",
+    "static/js/2.c9db1433.chunk.js": "/joaneeet7/NFT/static/js/2.c9db1433.chunk.js",
+    "static/js/2.c9db1433.chunk.js.map": "/joaneeet7/NFT/static/js/2.c9db1433.chunk.js.map",
+    "static/js/3.a542993d.chunk.js": "/joaneeet7/NFT/static/js/3.a542993d.chunk.js",
+    "static/js/3.a542993d.chunk.js.map": "/joaneeet7/NFT/static/js/3.a542993d.chunk.js.map",
+    "index.html": "/joaneeet7/NFT/index.html",
+    "static/css/main.8ab16b8e.chunk.css.map": "/joaneeet7/NFT/static/css/main.8ab16b8e.chunk.css.map",
+    "static/js/2.c9db1433.chunk.js.LICENSE.txt": "/joaneeet7/NFT/static/js/2.c9db1433.chunk.js.LICENSE.txt",
+    "static/media/0.a7444b84.png": "/joaneeet7/NFT/static/media/0.a7444b84.png",
+    "static/media/0.eb37e292.png": "/joaneeet7/NFT/static/media/0.eb37e292.png",
+    "static/media/0.f63f3b86.png": "/joaneeet7/NFT/static/media/0.f63f3b86.png",
+    "static/media/1.39e77af1.png": "/joaneeet7/NFT/static/media/1.39e77af1.png",
+    "static/media/1.f63f3b86.png": "/joaneeet7/NFT/static/media/1.f63f3b86.png",
+    "static/media/2.7cd7d872.png": "/joaneeet7/NFT/static/media/2.7cd7d872.png",
+    "static/media/2.f63f3b86.png": "/joaneeet7/NFT/static/media/2.f63f3b86.png",
+    "static/media/3.8c1b7447.png": "/joaneeet7/NFT/static/media/3.8c1b7447.png",
+    "static/media/3.ecd15e09.png": "/joaneeet7/NFT/static/media/3.ecd15e09.png",
+    "static/media/3.f63f3b86.png": "/joaneeet7/NFT/static/media/3.f63f3b86.png",
+    "static/media/4.70e1e827.png": "/joaneeet7/NFT/static/media/4.70e1e827.png",
+    "static/media/4.f63f3b86.png": "/joaneeet7/NFT/static/media/4.f63f3b86.png",
+    "static/media/5.0c56e43f.png": "/joaneeet7/NFT/static/media/5.0c56e43f.png",
+    "static/media/5.f63f3b86.png": "/joaneeet7/NFT/static/media/5.f63f3b86.png",
+    "static/media/_color.6fcfd2f3.png": "/joaneeet7/NFT/static/media/_color.6fcfd2f3.png",
+    "static/media/_rarity_1.c023df5d.png": "/joaneeet7/NFT/static/media/_rarity_1.c023df5d.png",
+    "static/media/_rarity_2.8248b880.png": "/joaneeet7/NFT/static/media/_rarity_2.8248b880.png",
+    "static/media/_rarity_3.b211dff2.png": "/joaneeet7/NFT/static/media/_rarity_3.b211dff2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.879e59f8.js",
+    "static/js/2.c9db1433.chunk.js",
+    "static/css/main.8ab16b8e.chunk.css",
+    "static/js/main.a040a3a9.chunk.js"
+  ]
+}
