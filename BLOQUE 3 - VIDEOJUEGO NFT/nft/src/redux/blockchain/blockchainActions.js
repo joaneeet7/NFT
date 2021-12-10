@@ -44,7 +44,7 @@ export const connect = () => {
                 // BSC Testnet -> 97
                 // MATIC/Polygon -> 80001
                 // Rinkeby -> 4
-                if (networkId == 80001) {
+                if (networkId == 4) {
                     const networkData = LipToken.networks[networkId];
                     const abi = LipToken.abi;
                     const address = networkData.address;
