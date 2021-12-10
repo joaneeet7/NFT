@@ -19,7 +19,7 @@
     "web-vitals": "^1.0.1",
     "web3": "^1.6.1"
   },
-  "homepage": "https://github.com/joaneeet7/NFT",
+  "homepage": "https://joaneeet7.github.io/NFT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
