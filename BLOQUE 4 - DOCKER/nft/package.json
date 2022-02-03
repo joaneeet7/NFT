@@ -17,6 +17,7 @@
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1",
+    "truffle": "5.4.31",
     "web3": "^1.6.1"
   },
   "homepage": "https://joaneeet7.github.io/NFT",

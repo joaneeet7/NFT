@@ -44,7 +44,8 @@ export const connect = () => {
                 // BSC Testnet -> 97
                 // MATIC/Polygon -> 80001
                 // Rinkeby -> 4
-                if (networkId == 4) {
+                const current_networkId = await web3.eth.net.getId()
+                if (networkId == current_networkId) {
                     const networkData = LipToken.networks[networkId];
                     const abi = LipToken.abi;
                     const address = networkData.address;
