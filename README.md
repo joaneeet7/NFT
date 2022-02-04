@@ -49,6 +49,8 @@ En el curso nos centraremos en:
 
 * Aprenderás a desplegar tus **Videojuegos NFT en la Blockchain Binance Smart Chain (BSC)**.
 
+* Despliegue del **Videojuego NFT en Docker**.
+
 
 ## ¿A quién le interesa el curso?
 
